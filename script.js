@@ -1,6 +1,6 @@
-const numberOfFilms = prompt ("Сколько фильмов вы уже посмотрели?", "");
+const numberOfFilms = +prompt ("Сколько фильмов вы уже посмотрели?", "");
 
-let PersonalMovieDB = {
+let personalMovieDB = {
   count:numberOfFilms,
   movies:{},
   actors:{},
@@ -10,7 +10,9 @@ let PersonalMovieDB = {
 
 const lastFilm = prompt("Один из последних просмотренных фильмов?","");
 const ratingFilm = prompt ("На сколкьо оцените его?", "");
+const lastFilm2 = prompt("Один из последних просмотренных фильмов?","");
+const ratingFilm2 = prompt ("На сколкьо оцените его?", "");
 
-PersonalMovieDB.movies.lastMovie = lastFilm;
-PersonalMovieDB.movies.ratingMovie = ratingFilm;
-console.log(PersonalMovieDB); 
+personalMovieDB.movies[lastFilm] = ratingFilm;
+personalMovieDB.movies[lastFilm2] = ratingFilm2;
+console.log(personalMovieDB);
